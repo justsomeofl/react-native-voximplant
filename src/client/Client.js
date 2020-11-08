@@ -93,6 +93,10 @@ export default class Client {
         return this._clientInstance;
     }
 
+    static resetInstance(clientConfig) {
+            this._clientInstance = new Client(clientConfig);
+    }
+
     /**
      * Set outer logging callback. The method allows integrating logging pipeline of the Voximplant React Native SDK into
      * your own logger i.e. the method call sends all events to your function.
